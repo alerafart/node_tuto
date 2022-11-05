@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/alerafart/node_tuto/issues"
   },
-  "homepage": "https://github.com/alerafart/node_tuto#readme"
+  "homepage": "https://github.com/alerafart/node_tuto#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
