@@ -1,31 +1,5 @@
-let http = require('http') 
 
-let fs = require('fs')
-let url = require('url')
-
-const EventEmitter = require('events')
-
-//class
-let App = {
-    start: function(port) {
-        let emmiter = new EventEmitter()
-        let server = http.createServer((request, response) => {
-
-            response.writeHead(200)
-
-            if(request.url == '/') {
-                emmiter.emit('root', response)
-            }
-
-            response.end()
-
-        }).listen(port)
-
-        return emmiter
-    }
-}
-
-let app = App.start(8080)
+let app = require('./app').start(8080)
 
 app.on('root', function(response) {
     response.write("je suis à la racine")
